@@ -2,8 +2,19 @@
 
 angular.module('blogList').
   component('blogList', {
-    template: "<div class=''><h1 class='new-class'>{{ title }}</h1><button ng-click='someClickTest()'>Click me!</button></div>",
-    controller: function($scope){
+    // template: "<div class=''><h1 class='new-class'>{{ title }}</h1><button ng-click='someClickTest()'>Click me!</button></div>",
+    templateUrl: '/templates/blog-list.html',
+    controller: function($routeParams, $scope){
+      console.log($routeParams)
+      var blogItems = [
+        {title: "Some title 1", id: 1, description: "This is a book"},
+        {title: "Title 2", id: 2, description: "This is a book"},
+        {title: "This no 3", id: 3, description: "This is a book"},
+        {title: "4 Sho", id: 4, description: "This is a book"}
+      ]
+
+      $scope.items = blogItems;
+
       $scope.title = 'Hi There faggot'
       $scope.clicks = 0
       $scope.someClickTest = function(){
