@@ -13,7 +13,7 @@ angular.module('bvb').
       template: "<blog-list></blog-list>"
     }).
     when("/blog/:id", {
-      template: "<blog-list></blog-list>"
+      template: "<blog-detail></blog-detail>"
     }).
     // when("/blog/2", {
     //   template: "<blog-list></blog-list>"

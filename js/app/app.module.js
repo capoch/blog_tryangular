@@ -5,6 +5,7 @@ angular.module('bvb', [
   'ngResource',
   'ngRoute',
   //internal
-  'blogList'
+  'blogList',
+  'blogDetail'
 
 ]);
