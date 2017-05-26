@@ -6,6 +6,7 @@ angular.module('bvb', [
   'ngRoute',
   //internal
   'blogList',
-  'blogDetail'
+  'blogDetail',
+  'confirmClick'
 
 ]);

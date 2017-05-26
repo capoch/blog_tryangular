@@ -4,19 +4,13 @@ angular.module('blogList').
   component('blogList', {
     // template: "<div class=''><h1 class='new-class'>{{ title }}</h1><button ng-click='someClickTest()'>Click me!</button></div>",
     templateUrl: '/templates/blog-list.html',
-    controller: function(Post, $routeParams, $scope){
+    controller: function(Post, $location, $rootScope, $routeParams, $scope){
+      $scope.goToItem = function(post){
+        // rootScope is necessary because we stopped immediate propagation
+        $rootScope.$apply(function(){
+          $location.path('/blog/' + post.id)
+        })
+      }
       $scope.items = Post.query();
     }
 });
-  // controller('BlogListController', function($scope){
-  //   console.log("hello")
-  //   $scope.title = 'Hi There faggot'
-  //   $scope.clicks = 0
-  //   $scope.someClickTest = function(){
-  //     console.log("clicked")
-  //     $scope.clicks += 1
-  //     $scope.title = "Oh now you clicked it "+$scope.clicks+" times, you miserable cunt"
-  //   }
-  // });
-
-  //component('blogList')
