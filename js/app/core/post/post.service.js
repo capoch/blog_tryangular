@@ -16,7 +16,7 @@ angular.
         },
         get: {
           method: "GET",
-          params: {},
+          // params: {},
           isArray: true,
           cache: true,
         }
